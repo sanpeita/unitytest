@@ -10,7 +10,7 @@ public class Move_player: MonoBehaviour
     private float JumpPower = 800;// ジャンプ力
     
     private Rigidbody rb;// Rigidbodyの機能を使うための変数
-    private bool Grounded;// 地面についているかどうかを判定するための変数
+    private bool Grounded = false;// 地面についているかどうかを判定するための変数
 
     // Start is called before the first frame update
     void Start()
