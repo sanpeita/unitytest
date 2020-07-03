@@ -7,6 +7,8 @@ public class Move_player: MonoBehaviour
 
     public float MoveSpeed;
     
+    private float JumpPower = 800;// ジャンプ力
+    
     private Rigidbody rb;// Rigidbodyの機能を使うための変数
     private bool Grounded;// 地面についているかどうかを判定するための変数
 
