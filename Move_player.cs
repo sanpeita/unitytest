@@ -32,5 +32,31 @@ public class Move_player: MonoBehaviour
         {
             transform.Rotate(0, -5, 0);
         }
+        
+        if(Input.GetKeyDown(KeyCode.Space))// もし、スペースキーがおされたら、
+        {
+            if(Grounded == true)// もし地面に着いていたら、
+            {
+                rb.AddForce(Vector3.up * JumpPower);// Rigidbodyに上向きにジャンプ力をかける
+            }
+        }
+        
     }
+   
+    private void OnCollisionEnter(Collision collision)// 物に触れた時の処理
+    {
+        if (collision.gameObject.tag == "Ground")// もし、触れた物のタグがGroundなら、
+        {
+            Grounded = true;// Groundedをtrueにする
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)// 物から離れた時の処理
+    {
+        if (collision.gameObject.tag == "Ground")// もし、離れた物のタグがGroundなら、
+        {
+            Grounded = false;// Groundedをfalseにする
+        }
+    }    
+    
 }
