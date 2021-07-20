@@ -27,12 +27,12 @@ public class PlayerMove: MonoBehaviour
         //Wキー押下時
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += transform.forward * MoveSpeed;
+            transform.position += transform.forward * moveSpeed;
         }
         //Sキー押下時
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += transform.forward * -1 * MoveSpeed;
+            transform.position += transform.forward * -1 * moveSpeed;
         }
         //Dキー押下時
         if (Input.GetKey(KeyCode.D))
@@ -46,7 +46,7 @@ public class PlayerMove: MonoBehaviour
         }
         //第一回a01====+====+====+====+====+====+====+====+====+====+====+ここまで
         
-        //第一回a02====+====+====+====+====+====+====+====+====+====+====+ここまで
+        //第一回a02====+====+====+====+====+====+====+====+====+====+====+ここから
         //AnimatorControllerで、
         //①MakeTransitionの矢印の中で、HasExitTimeのチェックが外れていること。(モーションを最後まで待たないということ)
         //②パラメータが設定されていること。bool型のパラメータisRunningなど。
